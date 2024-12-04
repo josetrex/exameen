@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Package Delivery Servientrega</title>
+    <style>
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: rgb(190, 250, 100);
+}
+
+form {
+    margin-bottom: 20px;
+}
+
+input {
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+    padding: 8px;
+}
+
+button {
+    margin: 10px 0;
+    padding: 10px 15px;
+    background-color: #004317;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #005b20;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #b3ab1e;
+}
+p{
+    text-align: center;
+    text-decoration: underline;
+    color: rgb(179, 6, 6);
+    font-size: small;
+}
+    </style>
+</head>
+<body>
+<h1 style="text-align: center;">Welcome to Servientrega</h1>
+<h2 style="text-align: center;">Package Data Entry</h2>
+<form id="addPackageForm">
+    <label for="recipientName">Recipient Name:</label>
+    <input type="text" id="recipientName" name="recipientName" placeholder="Enter recipient name" required>
+
+    <label for="packageId">Package ID:</label>
+    <input type="text" id="packageId" name="packageId" placeholder="Enter numeric Package ID" required>
+
+    <label for="weight">Weight (kg):</label>
+    <input type="number" id="weight" name="weight" placeholder="Enter package weight" step="0.01" required>
+
+    <button type="submit">Add Package</button>
+</form>
+
+<button id="sortButton">Sort Packages by Weight</button>
+
+<table id="packageTable" border="1">
+    <thead>
+        <tr>
+            <th>Recipient Name</th>
+            <th>Package ID</th>
+            <th>Weight (kg)</th>
+            <th>Tracking Code</th>
+        </tr>
+    </thead>
+    <tbody>
+
+    </tbody>
+</table>
+<p>If you have any issue please contact to "noesunaestafa@servientrega.com"</p>
+<script src="servientrega.js"></script>
+</body>
+</html>
